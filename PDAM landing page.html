@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDAM Bitung - Sistem Pembayaran Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <a href="#home"><i class="fas fa-home"></i> Beranda</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> Tentang PDAM</a>
+        <a href="#payment"><i class="fas fa-money-bill-wave"></i> Pembayaran</a>
+        <a href="admin.html" target="_blank"><i class="fas fa-user-cog"></i> Admin Panel</a>
+
+    </div>
+
+    <div class="header">
+        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+        <h1>PDAM Bitung</h1>
+        <img src="images/logo-pdam.png" alt="logo" class="logo">
+    </div>
+
+    <div class="content">
+        <!-- Home Section -->
+        <section id="home">
+            <h2>PDAM Bitung</h2>
+            <p>Penyedia layanan air bersih untuk Kota Bitung dengan layanan pembayaran online.</p>
+        </section>
+        
+        <!-- Payment Section -->
+        <section id="payment">
+            <h2>Pembayaran Tagihan</h2>
+            <label for="bill-number">Nomor Tagihan:</label>
+            <input type="text" id="bill-number" placeholder="Masukkan Nomor Tagihan Anda">
+            <button onclick="checkBill()">Cek Tagihan</button>
+            
+            <div id="bill-info" class="hidden">
+                <p>Nama Pelanggan: <span id="customer-name"></span></p>
+                <p>Alamat: <span id="customer-address"></span></p>
+                <p>Jumlah Pemakaian: <span id="water-usage"></span></p>
+                <p>Total Tagihan: <span id="total-bill"></span></p>
+                <label for="payment-method">Pilih Metode Pembayaran:</label>
+                <select id="payment-method">
+                    <option value="bank-transfer">Bank Transfer</option>
+                    <option value="e-wallet">E-Wallet (OVO, GoPay, DANA)</option>
+                </select>
+                <button onclick="payBill()">Bayar Sekarang</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>Tentang PDAM Bitung</h2>
+            <p>PDAM Bitung adalah penyedia layanan air bersih di Kota Bitung dengan lebih dari 10.000 pelanggan aktif. Kami berkomitmen untuk menyediakan air berkualitas dan memudahkan pembayaran tagihan melalui layanan online.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 PDAM Bitung</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - PDAM Bitung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel - PDAM Bitung</h1>
+        <p>Input Jumlah Pemakaian Air Pelanggan</p>
+    </header>
+
+    <form method="POST" action="add_customer.php">
+        <label for="customer-id-admin">Nomor Pelanggan:</label>
+        <input type="text" id="customer-id-admin" placeholder="Masukkan nomor pelanggan" required>
+    
+        <label for="customer-name-admin">Nama Pelanggan:</label>
+        <input type="text" id="customer-name-admin" placeholder="Masukkan nama pelanggan" required>
+    
+        <label for="customer-address-admin">Alamat Pelanggan:</label>
+        <input type="text" id="customer-address-admin" placeholder="Masukkan alamat pelanggan" required>
+    
+        <label for="water-usage-admin">Jumlah Pemakaian Air (m³):</label>
+        <input type="number" id="water-usage-admin" placeholder="Masukkan jumlah pemakaian" min="1" required>
+    
+        <p>Total Pembayaran: Rp <span id="total-payment-admin">0</span></p>
+    
+        <button type="button" onclick="saveBill()">Simpan Tagihan</button>
+    </form>
+    
+
+    <section id="customer-list">
+        <h2>Daftar Pelanggan</h2>
+        <ul id="customer-list-ul"></ul>
+    </section>
+
+    <footer>
+        <p>Admin Panel - © 2024 PDAM Bitung</p>
+    </footer>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
